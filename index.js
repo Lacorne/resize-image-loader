@@ -38,7 +38,7 @@ var createBlur = function(buffer, ext, defaultBlur, height, width){
   "<image width='100%' height='100%' xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='" + uri + "' filter='url(#puppybits)'></image>" +
   "</svg>";
   var micro = new Datauri().format('.svg', new Buffer(blur, 'utf8')).content;
-  var response = {size:{height:height, width:width}, placeholder:micro};
+  return {size:{height:height, width:width}, placeholder:micro};
 };
 
 var queue = (function(q, c){
